@@ -1,3 +1,4 @@
+//solution 1:
 function unite(arr1, arr2, arr3) {
   // Creates an empty array to store our final result.
   var finalArray = [];
@@ -21,3 +22,20 @@ function unite(arr1, arr2, arr3) {
   return finalArray;
 }
 
+// solution 2:
+function unite() {
+  var concatArr = [];
+  var i = 0;
+  while (arguments[i]){
+    concatArr = concatArr.concat(arguments[i]); i++;
+  }
+  uniqueArray = concatArr.filter(function(item, pos) {
+    return concatArr.indexOf(item) == pos;
+  }); 
+  return uniqueArray;
+}
+// Code Explanation:
+// Number of arguments can change dynamically so we don't need to bother providing our func with args at all
+// we use a while loop to concatanate all the arguments into one Array called concatArr
+// we use filter to remove the duplicate elements by checking the index of each element and removing same elements with different positions
+// ordering will be preserved as we didn't mess with it
