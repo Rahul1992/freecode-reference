@@ -22,7 +22,7 @@ function unite(arr1, arr2, arr3) {
   return finalArray;
 }
 
-// solution 2:
+// Solution 2:
 function unite() {
   var concatArr = [];
   var i = 0;
@@ -39,3 +39,21 @@ function unite() {
 // we use a while loop to concatanate all the arguments into one Array called concatArr
 // we use filter to remove the duplicate elements by checking the index of each element and removing same elements with different positions
 // ordering will be preserved as we didn't mess with it
+
+
+// Solution 3:
+
+function unite(arr1, arr2, arr3) {
+ var newArr;
+ //Convert the arguments object into an array
+  var args = Array.prototype.slice.call(arguments);
+  //Use reduce function to flatten the array
+  newArr = args.reduce(function(arrA,arrB){
+  //Apply filter to remove the duplicate elements in the array
+    return arrA.concat(arrB.filter(function(i){
+      return arrA.indexOf(i) === -1;
+    }));
+  });
+
+   return newArr;                    
+}
