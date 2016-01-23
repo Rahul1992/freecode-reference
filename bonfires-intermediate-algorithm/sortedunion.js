@@ -1,3 +1,5 @@
+// The program has to return a new array of unique values from two original arrays in the order they show up. So there is not sorting required, and no duplicates.
+
 // Solution 1:
 function unite(arr1, arr2, arr3) {
   // Creates an empty array to store our final result.
