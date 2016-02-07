@@ -33,7 +33,7 @@ function fearNotLetter(str) {
 
 // https://github.com/freecodecamp/freecodecamp/wiki/bonfire-missing-letters
 
-
+// solution 3:
 function fearNotLetter(str) {
   var compare = str.charCodeAt(0), missing;
 
